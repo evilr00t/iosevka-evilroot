@@ -4,30 +4,31 @@ design = [
 
     "common styles",
     # ligatures
-    "calt-eqeq", # ==
-    "calt-ineq",
-    "calt-exeq",
+    #"calt-eqeq", # ==
+    #"calt-ineq", # <= & =>
+    #"calt-exeq", !=
     "calt-arrow",
-    "calt-plusplus",
+    #"calt-plusplus",
     "calt-colons",
 
     # operators
     "calt-center-ops",
 
     # width
-    # "expanded",
+    #"expanded",
 
     # individual letters,
     "v-f-tailed",
     "v-g-doublestorey",
     "v-m-shortleg",
     "v-dollar-open", # $i
-    "v-at-fourfold", # @
+    "v-at-long", # @
     "v-l-italic",
     "v-i-italic",
     "v-y-curly",
     "v-underscore-low",
-    "v-percent-rings"
+    "v-percent-dots",
+    "v-numbersign-slanted"
 
 ]
 upright = ["upright-only", "styles"]   # Upright-only styles
