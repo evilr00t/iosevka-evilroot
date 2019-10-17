@@ -15,10 +15,11 @@ fi
 
 if [ ! -d iosevka-repo ]; then
   git clone https://github.com/be5invis/Iosevka.git iosevka-repo --depth=1
-  ln -s ${PWD}/private-build-plans.toml iosevka-repo/private-build-plans.toml
+t  ln -s ${PWD}/private-build-plans.toml iosevka-repo/private-build-plans.toml
 fi
-  pushd iosevka-repo
-  git pull --rebase
-  npm install
-  npm run build -- contents::iosevka-evilroot
+
+pushd iosevka-repo
+git pull --rebase
+npm install
+npm run build -- contents::iosevka-evilroot
 
