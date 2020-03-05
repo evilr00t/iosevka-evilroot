@@ -2,7 +2,7 @@
 family = "Iosevka evilroot"              # Font menu family name
 design = [
 
-    "common styles",
+    "leading-1000",
     # ligatures
     #"calt-eqeq", # ==
     #"calt-ineq", # <= & =>
