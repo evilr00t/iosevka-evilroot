@@ -4,23 +4,23 @@ set -e
 # check if we have ttfautohint
 if ! which ttfautohint >/dev/null 2>&1;
 then
-brew install ttfautohint
+  brew install ttfautohint
 fi
 # check if we have otfcc
 if ! which otfccdump >/dev/null 2>&1;
 then
-brew tap caryll/tap
-brew install otfcc-mac64
+  brew tap caryll/tap
+  brew install otfcc-mac64
 fi
 
 if ! which otf2otc >/dev/null 2>&1;
 then
-    pip3 install afdko
+  pip3 install afdko
 fi
 
 if [ ! -d iosevka-repo ]; then
   git clone https://github.com/be5invis/Iosevka.git iosevka-repo --depth=1
-  ln -s ${PWD}/private-build-plans.toml iosevka-repo/private-build-plans.toml
+  ln -s "${PWD}"/private-build-plans.toml iosevka-repo/private-build-plans.toml
 fi
 
 pushd iosevka-repo

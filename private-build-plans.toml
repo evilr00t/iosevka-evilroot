@@ -1,42 +1,28 @@
 [buildPlans.iosevka-evilroot]            # <iosevka-evilroot> is your plan name
 family = "Iosevka evilroot"              # Font menu family name
-design = [
+spacing = "normal"
+serifs = "sans"
 
-    "leading-1000",
-    # ligatures
-    #"calt-eqeq", # ==
-    #"calt-ineq", # <= & =>
-    #"calt-exeq", !=
-    "calt-arrow",
-    #"calt-plusplus",
-    "calt-colons",
+[buildPlans.iosevka-evilroot.variants]
+inherits = "ss09"
 
-    # operators
-    "calt-center-ops",
+[buildPlans.iosevka-evilroot.metric-override]
+leading = 1250
 
-    # width
-    #"expanded",
+[buildPlans.iosevka-evilroot.compatibility-ligatures]
+enables = ["center-ops", "arrow"]
 
-    # individual letters,
-    "v-f-tailed",
-    "v-g-doublestorey",
-    "v-m-shortleg",
-    "v-dollar-open", # $i
-    "v-at-long", # @
-    "v-l-italic",
-    "v-i-italic",
-    "v-y-curly",
-    "v-underscore-low",
-    "v-percent-dots",
-    "v-numbersign-slanted"
+[buildPlans.iosevka-evilroot.variants.design]
+f = 'tailed'
+g = 'doublestorey'
+m = 'shortleg'
+y = 'curly'
+underscore = 'low'
+percent = 'dots'
+number-sign = 'slanted'
+at = 'threefold'
+dollar = 'open'
 
-]
-upright = ["upright-only", "styles"]   # Upright-only styles
-italic = ["italic-only", "styles"]     # Italic-only styles
-oblique = ["oblique-only", "styles"]   # Oblique-only styles
-
-# Override default building weights
-# When buildPlans.<plan name>.weights is absent
 # All weights would built and mapped to default shape/CSS
 [buildPlans.iosevka-evilroot.weights.regular]
 shape = 400                            # Weight for glyph shapes
@@ -49,9 +35,8 @@ menu  = 700
 css   = 700
 
 # Override default building slant sets
-# Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
 # When this section is absent, all slants would be built.
-[buildPlans.iosevka-evilroot.slants]
+[buildPlans.iosevka-evilroot.slopes]
 upright = "normal"
 italic = "italic"
 oblique = "oblique"
